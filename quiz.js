@@ -24,33 +24,32 @@ c) correct answer (I would use a number for this)
 // display total results
 // start with just 1 question and then try with 3 and then 5
 // use inquirer and install packages
+var inquirer = require("inquirer");
 
-var Quiz = function(question, options, answer) {
+function Question(question, answers, correct) {
     this.question = question;
-    this.options = options;
-    this.answer = answer;
-};
+    this.answers = answers;
+    this.correct = correct;
+}
 
-var quiz_array = [];
-
-// insert questions here
-var questions_array = [
-    "Which team won the world cup of 2018?",
-    "Who is the best soccer player of all time?"
-];
-
-var questionOne = new Quiz(
-    questions_array[0],
-    ["1.Germany", "2.Brazil", "3.France"],
-    3
+var q1 = new Question(
+    "Is javascript the coolest programming language in the world?",
+    ["1.Yes", "2.No"],
+    0
 );
 
-var questionTwo = new Quiz(
-    questions_array[1],
-    ["1.Maradona", "2.Pele", "3.Zidane"],
+var q2 = new Question(
+    "What's the name of this course's teacher?",
+    ["john", "michael", "jonas"],
+    0
+);
+
+var q3 = new Question(
+    "what does best describe coding?",
+    ["boring", "hard", "fun", "tedious"],
     2
 );
 
-quiz_array.push(questionOne, questionTwo);
+var questions = [q1, q2, q3];
 
-console.log(quiz_array);
+var j = Math.floor(Math.random() * questions.length);

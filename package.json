@@ -1,0 +1,22 @@
+{
+  "name": "quiz-terminal",
+  "version": "1.0.0",
+  "description": "Terminal quiz game to practice.",
+  "main": "quiz.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wesbragagt/Quiz-Terminal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wesbragagt/Quiz-Terminal/issues"
+  },
+  "homepage": "https://github.com/wesbragagt/Quiz-Terminal#readme",
+  "dependencies": {
+    "inquirer": "^6.2.2"
+  }
+}
